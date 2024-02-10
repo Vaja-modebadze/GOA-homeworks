@@ -1,0 +1,2 @@
+print("Gavicani da davumegobrdi razmis wevrebs. Agretve gavicani 16-e jgufis wevrebi.")
+print("Chemi azrit Goal-Oriented Academy aris academia sadac: sheidzen axal unarebs, gaigrmaveb codnas da iqnebi warmatebuli. Me dzalian momewona is faqti rom es academia mouwodebs adamians pirovnuli  ganvitarebisken.")
