@@ -10,12 +10,13 @@ else:
     print("You are a senior citizen.")
 
 # 2)
-num = int(input("Enter your number: "))
- 
-if num % 2 == 0:
-    print("Number is even.")
-else:
-    print("Number is odd")
+for i in range(5):
+    num = int(input("Enter your number: "))
+    
+    if num % 2 == 0:
+        print("Number is even.")
+    else:
+        print("Number is odd")
 
 # 3)
 grade = input("Enter your grade: ")
@@ -34,12 +35,24 @@ elif grade == "F":
 # 4)
 num = 1
 
-while num <= 10 and num >= 1:
-    num = num + 1
+while num < 10:
     print(num)
+    num = num + 1
 
+# 5)
+num = 4
+number = 0
+count = 0
+
+while number != num:
+    number = int(input("Please enter number from (1-10): "))
+    if number == num:
+        print("You guessed number ip",count,"try")
+
+# 6)
+for i in range (5, 55, 5):
+    print(i)
 
 # 7)
-for i in range (10,0):
-    i = 10 - 1
+for i in range (10,1,-1):
     print(i)
