@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 33% 33%;
+  }
+
+.grid-item1 {
+    width: 400px;
+    height: 250px;
+    background-image: url(./images/219740_SCN_Seoul_iStock521707831_ZC35CD.webp);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    flex-direction: column;
+    
+    
+}
+
+.grid-item2 {
+    width: 400px;
+    height: 250px;
+    background-image: url(./images/merlin_138493119_dc17f17f-96a2-4487-a9ea-214914926374-superJumbo.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    flex-direction: column;
+
+}

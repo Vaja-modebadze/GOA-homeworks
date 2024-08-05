@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 33% 33%;
+  }
+
+.grid-item1 {
+    width: 400px;
+    height: 250px;
+    background-image: url(./images/219740_SCN_Seoul_iStock521707831_ZC35CD.webp);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    flex-direction: column;
+    margin-right: 200px;
+    
+    
+}
+
+.grid-item2 {
+    width: 400px;
+    height: 250px;
+    background-image: url(./images/merlin_138493119_dc17f17f-96a2-4487-a9ea-214914926374-superJumbo.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    flex-direction: column;
+    margin-left: 100px;
+
+}
+
+.grid-item3 {
+    width: 400px;
+    height: 250px;
+    background-image: url(./images/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_\(cropped\).jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.grid-item4{
+    width: 400px;
+    height: 250px;
+    background-image: url(./images/Dubai_Skylines_at_night_\(Pexels_3787839\).jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    flex-direction: column;
+    margin-top: 49px;
+    margin-left: 100px;
+}
