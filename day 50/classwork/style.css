@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+@keyframes colorG {
+    50% {
+        background-color: blue;
+    }
+    50% {
+        background-color: yellow;
+    }
+}
+
+.btn {
+    animation-name: colorG;
+    animation-duration: 2s, 2s;
+}
+

@@ -1,0 +1,9 @@
+.btn{
+    background-color: aquamarine;
+    width: 7em;
+}
+
+.btn:hover{
+    background-color: coral;
+    transition: 1s;
+}
