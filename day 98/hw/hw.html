@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    .game-container {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="login-container" style="display: none;">
+    <h2>Welcome! Please enter your name:</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="saveName()">Submit</button>
+  </div>
+
+  <div id="game-container" style="display: none;">
+    <h2>Welcome back, <span id="username"></span>!</h2>
+    <div>
+      <label for="colorPicker">Choose background color:</label>
+      <input type="color" id="colorPicker" onchange="changeBackgroundColor()">
+    </div>
+    
+    <div class="game-container">
+      <h3>Your Score: <span id="score"></span></h3>
+      <h4>Guess the number:</h4>
+      <input type="number" id="guessInput" placeholder="Enter a number">
+      <button onclick="checkGuess()">Submit Guess</button>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script>
+    if (!localStorage.getItem("username")) {
+      document.getElementById("login-container").style.display = "block";
+    } else {
+      loadGame();
+    }
+
+    function saveName() {
+      const username = document.getElementById("nameInput").value;
+      if (username) {
+        localStorage.setItem("username", username);
+        localStorage.setItem("score", 0);
+        localStorage.setItem("difficulty", 2); 
+        document.getElementById("login-container").style.display = "none";
+        loadGame();
+      }
+    }
+
+
+    function loadGame() {
+      const username = localStorage.getItem("username");
+      const score = parseInt(localStorage.getItem("score"));
+      const difficulty = parseInt(localStorage.getItem("difficulty"));
+      
+      document.getElementById("username").innerText = username;
+      document.getElementById("score").innerText = score;
+
+      const maxNumber = Math.pow(2, difficulty);
+      const targetNumber = Math.floor(Math.random() * maxNumber) + 1;
+      localStorage.setItem("targetNumber", targetNumber);
+      localStorage.setItem("difficulty", difficulty + 1); 
+
+      document.getElementById("game-container").style.display = "block";
+    }
+
+    function checkGuess() {
+      const userGuess = parseInt(document.getElementById("guessInput").value);
+      const targetNumber = parseInt(localStorage.getItem("targetNumber"));
+      
+      if (userGuess === targetNumber) {
+        let score = parseInt(localStorage.getItem("score"));
+        score++;
+        localStorage.setItem("score", score);
+        document.getElementById("score").innerText = score;
+        document.getElementById("result").innerText = "Correct! You've earned a point.";
+      } else {
+        document.getElementById("result").innerText = "Incorrect, try again!";
+      }
+    }
+
+    function changeBackgroundColor() {
+      const color = document.getElementById("colorPicker").value;
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+
+</body>
+</html>
